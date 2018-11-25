@@ -1,5 +1,38 @@
-# Welcome aboard 
+# Welcome aboard to Data Structures and Algorithms
 
-## COMP2521 t0 (Data Structures and Algorithms)
+## Introduction
+```c
+printf("Hello, T10A\n");
+```
 
-My name is *Deep*. 
+__Short introductions__
+
+Say:
+* Your name
+* Describe yourself as a person
+
+## Admin
+
+1) I will post all the code that we write together during the tutorial and any extra snippets or exercises that I feel will help you with your learning in this repository.
+
+> GitHub username: __deepanjan66__
+> Repository name: __COMP2521_19t0__
+
+2. You can also email me at
+
+> deepanjan.chakrabarty@unsw.edu.au
+
+3. If you have any questions about the tutorials, consider:
+	- Posting on the respective forums on the course website
+	- Sending me an email
+
+4. Setup a group chat on slack or discord for __COMP2521_T10A__.
+	- Inviting me is not necessary
+	- Throw jokes at each other and stay connected through the summer
+	- Share deadlines and helpful exercises with each other
+
+## Tutorial 1
+
+> https://www.cse.unsw.edu.au/~cs2521/19T0/week01/20_tutorial/
+
+

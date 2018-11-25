@@ -28,7 +28,7 @@ Say:
 
 4. Set up a group chat on slack or discord for __COMP2521_T10A__.
 	- Inviting me is not necessary
-	- Throw jokes at each other and stay connected through the summer
+	- Throw jokes at each other and stay connected throughout the summer
 	- Share deadlines and helpful exercises with each other
 
 ## Tutorial 1

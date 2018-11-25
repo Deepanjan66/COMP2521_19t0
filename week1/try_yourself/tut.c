@@ -55,6 +55,7 @@ int main(int argc, char* arhv[])
 Link node_new (Item item)
 {
    // TODO
+   return NULL;
 }
 
 // Insert a new node into a given non-empty list.

@@ -18,13 +18,13 @@ Say:
 > GitHub username: __deepanjan66__
 > Repository name: __COMP2521_19t0__
 
-2. You can also email me at
-
-> deepanjan.chakrabarty@unsw.edu.au
-
-3. If you have any questions about the tutorials, consider:
+2. If you have any questions about the tutorials, consider:
 	- Posting on the respective forums on the course website
 	- Sending me an email
+
+3. You can also email me at
+
+> deepanjan.chakrabarty@unsw.edu.au
 
 4. Set up a group chat on slack or discord for __COMP2521_T10A__.
 	- Inviting me is not necessary

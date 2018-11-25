@@ -3,4 +3,4 @@ all:
 	gcc -Werror -Wall -std=c11 -g -o loop.out forexample.c
 
 clean:
-	rm exec
+	rm *.out 

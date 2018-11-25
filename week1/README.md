@@ -26,7 +26,7 @@ Say:
 	- Posting on the respective forums on the course website
 	- Sending me an email
 
-4. Setup a group chat on slack or discord for __COMP2521_T10A__.
+4. Set up a group chat on slack or discord for __COMP2521_T10A__.
 	- Inviting me is not necessary
 	- Throw jokes at each other and stay connected through the summer
 	- Share deadlines and helpful exercises with each other

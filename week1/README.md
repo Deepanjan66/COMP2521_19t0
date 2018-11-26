@@ -31,6 +31,10 @@ Say:
 	- Throw jokes at each other and stay connected throughout the summer
 	- Share deadlines and helpful exercises with each other
 
+5. Time to say goodbye to `dcc`. Welcome `3c`.
+    - Use `3c +leak` instead of valgrind
+    - Use gdb for debugging
+
 ## Tutorial 1
 
 > https://www.cse.unsw.edu.au/~cs2521/19T0/week01/20_tutorial/

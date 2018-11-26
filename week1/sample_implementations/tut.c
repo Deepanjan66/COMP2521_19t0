@@ -1,3 +1,10 @@
+//===================================//
+// Written by: Deepanjan Chakrabarty
+// Date: 23th November, 2018
+// Last update: 27th November, 2018
+// Problem:
+//===================================//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -33,7 +40,7 @@ Link list_duplicate (Link l);
 // Task 3
 bool is_sorted (int *a, int n);
 
-int main(int argc, char* arhv[]) 
+int main(int argc, char* argv[]) 
 {
    Link ls = list_from_cstr ("hello world!");
    Link ls2 = list_duplicate (ls);

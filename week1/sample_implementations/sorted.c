@@ -10,16 +10,32 @@ typedef int bool;
 // Task 3
 bool is_sorted (int *a, int n);
 void print_sorted(int *a, int n);
+void test_sorted(void);
 
-int main(int argc, char* arhv[]) 
+int main(int argc, char* argv[]) 
 {
    int a[5] = {1,2,3,4,5};
-   int b[5] = {3,2,6,3,1};
 
    print_sorted(a, 5);
-   print_sorted(b, 5);
+   // print_sorted(b, 5);
+   test_sorted();
 
    return EXIT_SUCCESS;
+}
+
+void print_sorted(int *a, int n) 
+{
+   if (is_sorted(a, n))
+      printf("The array is sorted\n");
+   else
+      printf("The array is not sorted\n");
+}
+
+void test_sorted() {
+    int b[6] = {1,2,3,4,5,6};
+    assert(is_sorted(b, 6) == TRUE);
+    int a[4] = {2,1,3,4};
+    assert(is_sorted(a, 4) == FALSE);
 }
 
 // Given an array of length n,
@@ -31,13 +47,10 @@ int main(int argc, char* arhv[])
 bool is_sorted (int *a, int n)
 {
    // TODO
-   return FALSE;
-}
+    int i = 0;
+    for (i = 0; i < (n - 2); i++) {
+        if (a[i] > a[i+1]) return FALSE; 
+    }
 
-void print_sorted(int *a, int n) 
-{
-   if (is_sorted(a, n))
-      printf("The array is sorted\n");
-   else
-      printf("The array is not sorted\n");
+   return TRUE;
 }

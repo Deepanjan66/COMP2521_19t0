@@ -2,7 +2,7 @@
 // Written by: Deepanjan Chakrabarty
 // Date: 23th November, 2018
 // Last update: 27th November, 2018
-// Problem:
+// Tutorial 1 demo
 //===================================//
 
 #include <stdio.h>
@@ -37,9 +37,6 @@ Link list_reverse (Link l);
 int length (Link l);
 Link list_duplicate (Link l);
 
-// Task 3
-bool is_sorted (int *a, int n);
-
 int main(int argc, char* argv[]) 
 {
    Link ls = list_from_cstr ("hello world!");
@@ -47,7 +44,7 @@ int main(int argc, char* argv[])
 
    list_print (ls);
    list_print (ls2);
-   list_print (list_reverse (ls));
+   list_print (list_reverse(ls));
    list_print (ls);
    list_print (ls2); 
    
@@ -95,6 +92,8 @@ void list_print (Link l)
    printf("NULL]\n");
 }
 
+// "hello" 
+// h -> e -> l -> l -> o -> NULL
 Link list_from_cstr (const char *str) 
 {
 
@@ -114,11 +113,17 @@ Link list_from_cstr (const char *str)
    return head;
 }
 
+// h -> e -> l -> l -> o -> NULL
+// o -> l -> l -> e -> h -> NULL
+//
+// return h
 Link list_reverse (Link l) 
 {
    if (l == NULL) return NULL;
+
+   Link dup = list_duplicate(l);
    Link prev = NULL;
-   Link curr = l;
+   Link curr = dup;
 
    while (curr != NULL) {
       Link tmp = curr->next;
@@ -141,21 +146,18 @@ void free_link (Link l) {
    }
 }
 
+// Should return the length of the linkedlist
 int length(Link l) 
 {
    // TODO
    return 0;   
 }
 
+// Should return a duplicate linkedlist 
+//(deep copy)
 Link list_duplicate (Link l) 
 {
    // TODO
-   return NULL;  
+   return NULL;
 }
 
-
-bool is_sorted (int *a, int n)
-{
-   // TODO
-   return FALSE;
-}

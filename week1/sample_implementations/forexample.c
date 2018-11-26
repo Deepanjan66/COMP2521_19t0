@@ -1,3 +1,10 @@
+//===================================//
+// Written by: Deepanjan Chakrabarty
+// Date: 23th November, 2018
+// Last update: 27th November, 2018
+// Tutorial 1 demo
+//===================================//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>

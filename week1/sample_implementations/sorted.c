@@ -1,3 +1,10 @@
+//===================================//
+// Written by: Deepanjan Chakrabarty
+// Date: 23th November, 2018
+// Last update: 27th November, 2018
+// Tutorial 1 demo
+//===================================//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -10,7 +17,6 @@ typedef int bool;
 // Task 3
 bool is_sorted (int *a, int n);
 void print_sorted(int *a, int n);
-void test_sorted(void);
 
 int main(int argc, char* argv[]) 
 {
@@ -18,7 +24,6 @@ int main(int argc, char* argv[])
 
    print_sorted(a, 5);
    // print_sorted(b, 5);
-   test_sorted();
 
    return EXIT_SUCCESS;
 }
@@ -31,13 +36,6 @@ void print_sorted(int *a, int n)
       printf("The array is not sorted\n");
 }
 
-void test_sorted() {
-    int b[6] = {1,2,3,4,5,6};
-    assert(is_sorted(b, 6) == TRUE);
-    int a[4] = {2,1,3,4};
-    assert(is_sorted(a, 4) == FALSE);
-}
-
 // Given an array of length n,
 // return TRUE if the array is sorted
 // in ascending order and FALSE otherwise
@@ -46,11 +44,20 @@ void test_sorted() {
 // array
 bool is_sorted (int *a, int n)
 {
-   // TODO
-    int i = 0;
-    for (i = 0; i < (n - 2); i++) {
-        if (a[i] > a[i+1]) return FALSE; 
-    }
+   int i = 0;
+   for (i = 0; i < (n - 1); i++) {
+       if (a[i] > a[i+1]) return FALSE; 
+   }
 
    return TRUE;
+
+   /*
+
+   bool flag = TRUE;
+
+   while (i < (n-1)) {
+       if (a[i] > a[i+1]) flag = FALSE;
+   }
+
+   return flag;*/
 }

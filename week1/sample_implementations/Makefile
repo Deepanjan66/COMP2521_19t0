@@ -11,6 +11,7 @@ all:
 	${CC} ${CFLAGS} -o exec.out tut.c
 	${CC} ${CFLAGS} -o loop.out forexample.c
 	${CC} ${CFLAGS} -o sorted.out sorted.c
+	${CC} ${CFLAGS} -o days.out numDay.c
 
 # Running `make cse` will run this target
 .PHONY: cse
@@ -18,6 +19,7 @@ cse:
 	${CC3} ${CFLAGS3} -o exec.out tut.c
 	${CC3} ${CFLAGS3} -o loop.out forexample.c
 	${CC3} ${CFLAGS3} -o sorted.out sorted.c
+	${CC3} ${CFLAGS3} -o days.out numDay.c
 
 # Run `make clean` to delete all executables
 .PHONY: clean

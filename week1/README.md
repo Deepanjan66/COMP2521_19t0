@@ -34,6 +34,7 @@ Say:
 5. Time to say goodbye to `dcc`. Welcome `3c`.
     - Use `3c +leak` instead of valgrind
     - Use gdb for debugging
+    - To use on cse machines, run `2521 3c` or `2521 3c +leak`
 
 ## Tutorial 1
 

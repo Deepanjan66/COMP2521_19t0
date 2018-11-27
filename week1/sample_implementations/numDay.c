@@ -21,8 +21,8 @@ char* numToDay(int n) {
 int main(int argc, char* argv[]) {
     printf("%d is %s\n", 4, numToDay(4));
 
-    // char* name = (0)? "Hello" : "Bye";
-    // printf("%s\n", name);
+    char* name = (0)? "Hello" : "Bye";
+    printf("%s\n", name);
 
     return EXIT_SUCCESS;
     

@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
    list_print (ls2);
    list_print (list_reverse(ls));
    list_print (ls);
-   list_print (ls2); 
+   list_print (ls2);
    
    free_link (ls);
    free_link (ls2); 
@@ -120,10 +120,10 @@ Link list_from_cstr (const char *str)
 Link list_reverse (Link l) 
 {
    if (l == NULL) return NULL;
-
-   Link dup = list_duplicate(l);
+   
+   Link newHead = list_duplicate(l);
    Link prev = NULL;
-   Link curr = dup;
+   Link curr = newHead;
 
    while (curr != NULL) {
       Link tmp = curr->next;
@@ -149,15 +149,34 @@ void free_link (Link l) {
 // Should return the length of the linkedlist
 int length(Link l) 
 {
-   // TODO
-   return 0;   
+   int count = 0;
+   Link curr = l;
+
+   while (curr != NULL) {
+      count++;
+      curr = curr->next;
+   }
+
+   return count;   
 }
 
 // Should return a duplicate linkedlist 
 //(deep copy)
 Link list_duplicate (Link l) 
 {
-   // TODO
-   return NULL;
+   assert(l != NULL); 
+
+   Link newL = node_new(l->item); 
+
+   Link newCurr = newL;
+   Link oldCurr = l->next;
+
+   while (oldCurr != NULL) {
+      newCurr->next = node_new(oldCurr->item);
+      newCurr = newCurr->next;
+      oldCurr = oldCurr->next;
+   }
+
+   return newL;
 }
 

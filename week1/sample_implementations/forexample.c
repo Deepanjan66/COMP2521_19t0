@@ -14,9 +14,17 @@ int main(int argc, char* argv[]) {
 
    char ch;
    // Write an equivalent while loop for this for loop
-   for (ch = getchar (); ch != EOF; ch = getchar ()) {
+   /*for (ch = getchar (); ch != EOF; ch = getchar ()) {
        putchar (ch);
+   }*/
+   ch = getchar();
+   while (ch != EOF) {
+      putchar(ch);
+      ch = getchar();
    }
+
+   while ((ch = getchar()) != EOF) 
+      putchar(ch);
 
    return EXIT_SUCCESS;
 }

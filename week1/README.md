@@ -36,8 +36,18 @@ Say:
     - Use gdb for debugging
     - To use on cse machines, run `2521 3c` or `2521 3c +leak`
 
+6. Every week I'll add extra code/resources under the `extras/` folder. 
+   Have a look at them if you are interested in diving deeper into some of
+   the topics discussed in the course.
+
 ## Tutorial 1
 
 > https://www.cse.unsw.edu.au/~cs2521/19T0/week01/20_tutorial/
+
+## Extra 
+
+In this week's extra, we are looking at
+   - How structs are padded in C
+   - A deeper dive into the addresses stored in pointers
 
 

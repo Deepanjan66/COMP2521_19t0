@@ -1,7 +1,44 @@
 # Basics of GDB
 
-So, let's try and wrap our heads around gdb. 
+So, let's try and wrap our heads around gdb. We'll use the following simple program for our analysis
 
+```c
+ 1	#include <stdio.h>
+ 2	#include <stdlib.h>
+ 3
+ 4	typedef struct node* Node;
+ 5
+ 6	struct node {
+ 7	   int item;
+ 8	   Node next;
+ 9	};
+10
+11
+12	Node new_node(int item);
+13
+14	int main(int argc, char* argv[]) {
+15
+16	   printf("===== fun with gdb =====\n");
+17	   Node head = new_node(1);
+18	   head->next = new_node(2);
+19	   head->next->next = new_node(3);
+20
+21	   free(head->next->next);
+22	   free(head->next);
+23	   free(head);
+24
+25	   return EXIT_SUCCESS;
+26	}
+27
+28	Node new_node(int item) {
+29	   Node curr = malloc(sizeof(*curr));
+30
+31	   curr->item = item;
+32	   curr->next = NULL;
+33
+34	   return curr;
+35	}
+```
 
 ## Open
 

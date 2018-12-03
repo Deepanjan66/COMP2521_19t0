@@ -1,0 +1,2 @@
+This is another textbuffer.
+I shall use this to demo inserts.

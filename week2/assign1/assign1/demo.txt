@@ -1,0 +1,15 @@
+This file contains random bits of text.
+I promise there is nothing interesting here.
+Please stop reading. You'll just end up wasting your time.
+Are you still reading?
+Why are you still reading?
+Okay, jokes on you. 
+
+See I told you there's nothing interesting here.
+This is another textbuffer.
+I shall use this to demo inserts.
+Still reading?
+Okay, I'll give you something for getting this far.
+jk
+
+You guys should seriously stop reading here.

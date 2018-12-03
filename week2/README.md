@@ -18,6 +18,8 @@
 
 ## This week's discussions:
 
+Tutorial link: https://www.cse.unsw.edu.au/~cs2521/19T0/week02/20_tutorial/
+
 1) ADT - Abstract data types
    * What does this help us with?
    * When to use `#include <>` and `#include ""`

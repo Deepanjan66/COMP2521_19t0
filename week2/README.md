@@ -14,7 +14,15 @@
    * Don't test your code because you have to. Test your code because you want to.
    * What is the main purpose of writing tests?
    * How would you write test cases?
+   * What is `assert(3)` good for and when should you use them?
 
+3) ADT - Abstract data types
+   * What does this help us with?
+   * When to use `#include <>` and `#include ""`
+
+4) Stack and Queue
+   * What are they?
+   * How do they work?
 
 ## Extras
 

@@ -22,7 +22,7 @@ gdb -q ./test_gdb
 To run the executable inside gdb, just do
 
 ```c
-run
+(gdb) run
 ```
 
 or `r` would also do. You will notice that this runs the program and shows you all the output. In
@@ -38,7 +38,7 @@ this program, we only have one print statement. So, that gets printed to standar
 To look at the code from inside gdb, use `list`.
 
 ```gdb
-list 20
+(gdb) list 20
 ```
 
 will list 5 lines before and 5 lines after line 20.
@@ -65,7 +65,7 @@ So, we can run the executable and look at actual lines of code inside gdb. But l
 Let's break at line 17
 
 ```c
-b 17
+(gdb) b 17
 ```
 
 Output:
@@ -76,7 +76,7 @@ Breakpoint 1 at 0x565555e0: file gdb_test.c, line 17.
 This will create a breakpoint for us at line 17. Now, if we run the program, the execution will stop at line 17.
 
 ```
-run
+(gdb) run
 ```
 
 Output:
@@ -89,7 +89,7 @@ So, the execution has paused at our breakpoint. To see all
 the local variables within the scope of the current function, do
 
 ```
-info local
+(gdb) info local
 ```
 
 Output:
@@ -101,7 +101,7 @@ Notice that line 17 hasn't been executed yet. Hence, head has a random
 value inside. To verify this, if you do
 
 ```
-print head->item
+(gdb) print head->item
 ```
 Ouptut:
 ```
@@ -113,7 +113,7 @@ Typing in next executes the current line and halts execution at the
 next instruction line.
 
 ```
-next
+(gdb) next
 ```
 
 Output:
@@ -125,7 +125,7 @@ As you can see, we have moved on to the next line and paused there.
 Line 17 has now been executed. So, if you do
 
 ```
-print head->item
+(gdb) print head->item
 ```
 Output:
 ```
@@ -146,7 +146,7 @@ are paused at line 18 now.
 If you want to jump inside the `new_node` funtion, run
 
 ```
-step
+(gdb) step
 ```
 Output:
 ```
@@ -171,7 +171,11 @@ As you can see, we have now moved to line 25 which is inside the
 `new_node` function. You can do
 
 ```
-next
+(gdb) next
+```
+Output:
+```
+27	   curr->item = item;
 ```
 
 to run the current line and halt at the next instruction line.

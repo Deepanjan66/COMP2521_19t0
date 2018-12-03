@@ -11,7 +11,8 @@ struct node {
 
 Node new_node(int item);
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
 
    printf("===== fun with gdb =====\n");
    Node head = new_node(1);
@@ -25,7 +26,8 @@ int main(int argc, char* argv[]) {
    return EXIT_SUCCESS;
 }
 
-Node new_node(int item) {
+Node new_node(int item) 
+{
    Node curr = malloc(sizeof(*curr));
 
    curr->item = item;

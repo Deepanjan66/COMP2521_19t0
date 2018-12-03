@@ -16,28 +16,30 @@ So, let's try and wrap our heads around gdb. We'll use the following simple prog
 11
 12	Node new_node(int item);
 13
-14	int main(int argc, char* argv[]) {
-15
-16	   printf("===== fun with gdb =====\n");
-17	   Node head = new_node(1);
-18	   head->next = new_node(2);
-19	   head->next->next = new_node(3);
-20
-21	   free(head->next->next);
-22	   free(head->next);
-23	   free(head);
-24
-25	   return EXIT_SUCCESS;
-26	}
-27
-28	Node new_node(int item) {
-29	   Node curr = malloc(sizeof(*curr));
-30
-31	   curr->item = item;
-32	   curr->next = NULL;
-33
-34	   return curr;
-35	}
+14	int main(int argc, char* argv[])
+15	{
+16
+17	   printf("===== fun with gdb =====\n");
+18	   Node head = new_node(1);
+19	   head->next = new_node(2);
+20	   head->next->next = new_node(3);
+21
+22	   free(head->next->next);
+23	   free(head->next);
+24	   free(head);
+25
+26	   return EXIT_SUCCESS;
+27	}
+28
+29	Node new_node(int item)
+30	{
+31	   Node curr = malloc(sizeof(*curr));
+32
+33	   curr->item = item;
+34	   curr->next = NULL;
+35
+36	   return curr;
+37	}
 ```
 
 ## Open

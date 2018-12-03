@@ -16,13 +16,17 @@
    * How would you write test cases?
    * What is `assert(3)` good for and when should you use them?
 
-3) ADT - Abstract data types
+## This week's discussions:
+
+1) ADT - Abstract data types
    * What does this help us with?
    * When to use `#include <>` and `#include ""`
 
-4) Stack and Queue
+2) Stack and Queue
    * What are they?
    * How do they work?
+
+3) Difference between black-box and white-box testing
 
 ## Extras
 

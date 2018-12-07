@@ -156,7 +156,7 @@ bool is_emordnilap_imp_2(char *string) {
 
    size_t left = 0;
    size_t right = strlen(string) - 1;
-   if (right == 0) return FALSE;
+   if (right < 0) return FALSE;
 
    size_t count = 0;
 

@@ -99,6 +99,8 @@ bool is_emordnilap_imp_1(char *string) {
    size_t mid = (count / 2);
    i = 0;
    size_t currCount = 0;
+   // while the number of valid characters seen so far is less
+   // than half of the total number of valid characters
    while (currCount < mid) {
       if (valid(string[i])) {
          currCount++;

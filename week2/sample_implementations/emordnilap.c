@@ -17,18 +17,27 @@
 
 // Item here should be a char
 #include "Item.h"
-#include "Stack.h"
+#include "stack.h"
 
 #define TRUE 1
 #define FALSE 0
 
 // Bonus: Function macros
+// This macro takes one argument and the lowercase version
+// If the argument isn't an uppercase letter, it just returns the
+// exact character passed as the argument
 #define LOWER(ch) ((ch >= 'A' && ch <= 'Z')? ch - 'A' + 'a' : ch)
-
+// This macro takes two characters and returns TRUE if the lowercase
+// version of both characters match
+#define EQUAL(ch1, ch2) (LOWER(ch1) == LOWER(ch2))
+// macro for the valid function
+#define VALID(ch) ((LOWER(ch) >= 'a' && LOWER(ch) <= 'z')? TRUE : FALSE)
 // You can also use this function but now you know 
 // how to write macros in C
 char lower(char c);
 bool valid(char c);
+// Bonus: Passing functions as arguments to other functions
+// Look at actual implementation for more comments
 void runtests( bool (*emordnilap_func)(char*) );
 
 // TIME COMPLEXITY O(N); SPACE COMPLEXITY: O(N)
@@ -86,7 +95,7 @@ bool is_emordnilap_imp_1(char *string) {
    size_t i = 0;
 
    for (i = 0; string[i] != '\0'; i++) {
-      if (valid(string[i])) count++;
+      if (VALID(string[i])) count++;
    }
 
    // If odd number of valid characters exist, return FALSE
@@ -102,7 +111,7 @@ bool is_emordnilap_imp_1(char *string) {
    // while the number of valid characters seen so far is less
    // than half of the total number of valid characters
    while (currCount < mid) {
-      if (valid(string[i])) {
+      if (VALID(string[i])) {
          currCount++;
          stack_push(newStack, string[i]);
       }
@@ -116,15 +125,14 @@ bool is_emordnilap_imp_1(char *string) {
    // i from the previous loop should already have
    // the next index we have to start looking from
    while (currCount < count) {
-      if (!valid(string[i])) {
+      if (!VALID(string[i])) {
          i++;
          continue;
       }
       Item ch = stack_pop(newStack);
 
-      // printf("%c and %c\n", LOWER(ch), LOWER(string[i]));
-      if (LOWER(ch) != LOWER(string[i])) {
-         //printf("%c and %c don't match\n", LOWER(ch), LOWER(string[i]));
+      if (!EQUAL(ch, string[i])) {
+         // Not an emordnilap.
          flag = FALSE;
          break;
       }
@@ -154,13 +162,13 @@ bool is_emordnilap_imp_2(char *string) {
 
    while (left <= right) {
       // If the left character is not valid, move right
-      if (!valid(string[left])) left++;
+      if (!VALID(string[left])) left++;
       // If the right character is not valid, move left 
-      else if (!valid(string[right])) right--;
+      else if (!VALID(string[right])) right--;
       // if the two characters are not equal, we can
       // safely return FALSE. Early return is fine as
       // we don't have anything to free
-      else if (LOWER(string[left]) != LOWER(string[right])) return FALSE;
+      else if (!EQUAL(string[left], string[right])) return FALSE;
       else {
          // If i and j are not the same, we have
          // seen two new characters

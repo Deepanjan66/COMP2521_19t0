@@ -191,9 +191,9 @@ void runtests( bool (*emordnilap_func)(char*) ) {
    // The argument to this function is a function pointer
    // that returns a bool and takes (char*) as argument
 
-   // I got lazy and put them all in the same function
-   // You should create separate functions for each of
-   // the test cases. 
+   // We don't have to allocate or define new variables for each
+   // of these tests and hence, putting them inside the same function should
+   // be fine
    assert(emordnilap_func("Aa") == TRUE);
    assert(emordnilap_func("AA") == TRUE);
    assert(emordnilap_func("b b b      b b b    b                            b") == TRUE);
